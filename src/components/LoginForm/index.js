@@ -7,37 +7,33 @@ class LoginForm extends Component {
     password: '',
   }
 
-  renderPasswordField = () => {
-    return (
-      <>
-        <label htmlFor="password" className="input-label">
-          PASSWORD
-        </label>
-        <input
-          id="password"
-          type="password"
-          placeholder="Password"
-          className="user-input"
-        />
-      </>
-    )
-  }
+  renderPasswordField = () => (
+    <>
+      <label htmlFor="password" className="input-label">
+        PASSWORD
+      </label>
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+        className="user-input"
+      />
+    </>
+  )
 
-  renderUsernameField = () => {
-    return (
-      <>
-        <label htmlFor="username" className="input-label">
-          USERNAME
-        </label>
-        <input
-          id="username"
-          type="text"
-          placeholder="Username"
-          className="user-input"
-        />
-      </>
-    )
-  }
+  renderUsernameField = () => (
+    <>
+      <label htmlFor="username" className="input-label">
+        USERNAME
+      </label>
+      <input
+        id="username"
+        type="text"
+        placeholder="Username"
+        className="user-input"
+      />
+    </>
+  )
 
   render() {
     return (

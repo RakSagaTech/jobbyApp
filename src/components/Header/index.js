@@ -3,8 +3,8 @@ import {BsBriefcaseFill} from 'react-icons/bs'
 import {FiLogOut} from 'react-icons/fi'
 import './index.css'
 
-const Header = () => {
-  return (
+const Header = () => (
+  <>
     <nav className="nav-container">
       <div className="nav-content-container">
         <img
@@ -34,7 +34,7 @@ const Header = () => {
         </button>
       </div>
     </nav>
-  )
-}
+  </>
+)
 
 export default Header
