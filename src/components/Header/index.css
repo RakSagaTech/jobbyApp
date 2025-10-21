@@ -1,0 +1,116 @@
+.nav-container {
+  background-color: #272727;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    padding: 20px 60px;
+  }
+}
+
+.logo-and-icons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-website-logo {
+  width: 70px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-website-logo {
+    width: 150px;
+  }
+}
+
+.nav-sm-menu-container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-sm-menu-container {
+    display: none;
+  }
+}
+
+.home-icon {
+  color: #ffffff;
+  height: 26px;
+  width: 26px;
+}
+
+.brief-icon {
+  color: #ffffff;
+  height: 26px;
+  width: 26px;
+  margin-left: 20px;
+}
+
+.logout-icon {
+  color: #ffffff;
+  height: 26px;
+  width: 26px;
+  margin-left: 20px;
+}
+
+.sm-logout-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-lg-container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-lg-container {
+    display: none;
+  }
+}
+
+.lg-home-item {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.lg-jobs-item {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 24px;
+}
+
+.lg-logout-btn {
+  background-color: #6366f1;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 34px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .lg-logout-btn {
+    display: none;
+  }
+}

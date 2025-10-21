@@ -1,4 +1,5 @@
 import LoginFrom from './components/LoginForm'
+import Header from './components/Header'
 import './App.css'
 
 // These are the lists used in the application. You can move them to any component needed.
@@ -41,6 +42,6 @@ const salaryRangesList = [
 ]
 
 // Replace your code here
-const App = () => <LoginFrom />
+const App = () => <Header />
 
 export default App
