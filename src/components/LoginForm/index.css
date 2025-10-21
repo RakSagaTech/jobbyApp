@@ -1,0 +1,100 @@
+.app-container {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: #272727;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  width: 87%;
+  padding: 20px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .form-container {
+    width: 450px;
+    max-width: 550px;
+    padding: 46px 50px;
+  }
+}
+
+.website-logo {
+  width: 70px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .website-logo {
+    width: 160px;
+    margin-bottom: 40px;
+  }
+}
+
+.user-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.input-label {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 2.4;
+}
+
+@media screen and (min-width: 768px) {
+  .input-label {
+    font-size: 14px;
+  }
+}
+
+.user-input {
+  border: 1px solid #64748b;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  height: 40px;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768x) {
+  .user-input {
+    font-size: 16px;
+  }
+}
+
+.login-btn {
+  background-color: #4f46e5;
+  height: 40px;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 450;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #f8fafc;
+  margin-top: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .login-btn {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+}
