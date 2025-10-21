@@ -6,7 +6,7 @@ import './index.css'
 const Header = () => {
   return (
     <nav className="nav-container">
-      <div className="logo-and-icons-container">
+      <div className="nav-content-container">
         <img
           src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
           alt="website logo"
@@ -25,9 +25,9 @@ const Header = () => {
             </button>
           </li>
         </ul>
-        <ul className="nav-lg-container">
-          <li className="lg-home-item">Home</li>
-          <li className="lg-jobs-item">Jobs</li>
+        <ul className="nav-lg-menu-container">
+          <li className="home-item">Home</li>
+          <li className="jobs-item">Jobs</li>
         </ul>
         <button type="button" className="lg-logout-btn">
           Logout

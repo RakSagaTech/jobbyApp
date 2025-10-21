@@ -10,7 +10,7 @@
   }
 }
 
-.logo-and-icons-container {
+.nav-content-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +68,7 @@
   padding: 0px;
 }
 
-.nav-lg-container {
+.nav-lg-menu-container {
   display: flex;
   align-items: center;
   list-style-type: none;
@@ -76,19 +76,19 @@
 }
 
 @media screen and (max-width: 767px) {
-  .nav-lg-container {
+  .nav-lg-menu-container {
     display: none;
   }
 }
 
-.lg-home-item {
+.home-item {
   color: #ffffff;
   font-family: 'Roboto';
   font-size: 17px;
   font-weight: 500;
 }
 
-.lg-jobs-item {
+.jobs-item {
   color: #ffffff;
   font-family: 'Roboto';
   font-size: 17px;
