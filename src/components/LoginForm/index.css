@@ -98,3 +98,13 @@
     font-size: 14px;
   }
 }
+
+.error-msg {
+  color: #ff0b37;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  align-self: flex-start;
+  margin-bottom: 0px;
+}
