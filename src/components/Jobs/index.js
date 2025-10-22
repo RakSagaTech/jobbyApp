@@ -59,6 +59,9 @@ class Jobs extends Component {
   state = {
     apiStatus: apiStatusConstants.initial,
     jobsList: [],
+    selectedEmploymentTypeIds: [],
+    selectedSalaryRangeId: '',
+    searchInputValue: '',
   }
 
   componentDidMount() {
@@ -70,9 +73,17 @@ class Jobs extends Component {
       apiStatus: apiStatusConstants.inProgress,
     })
 
-    const jwtToken = Cookies.get('jwt_token')
+    const {
+      selectedEmploymentTypeIds,
 
-    const apiUrl = 'https://apis.ccbp.in/jobs'
+      selectedSalaryRangeId,
+
+      searchInputValue,
+    } = this.state
+
+    const jwtToken = Cookies.get('jwt_token')
+    const employmentQuery = selectedEmploymentTypeIds.join(',')
+    const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employmentQuery}&minimum_package=${selectedSalaryRangeId}&search=${searchInputValue}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -177,6 +188,15 @@ class Jobs extends Component {
     }
   }
 
+  updateSalarayRangeId = salaryId => {
+    this.setState(
+      {
+        selectedSalaryRangeId: salaryId,
+      },
+      this.fetchJobsListDetails,
+    )
+  }
+
   renderSalaryRangeView = () => (
     <div className="salary-range-container">
       <h1 className="salary-heading">Salary Range</h1>
@@ -185,11 +205,30 @@ class Jobs extends Component {
           <SalaryRange
             key={eachSalaryRange.salaryRangeId}
             salaryRangeDetails={eachSalaryRange}
+            updateSalarayRangeId={this.updateSalarayRangeId}
           />
         ))}
       </ul>
     </div>
   )
+
+  updateEmploymentType = employmentId => {
+    this.setState(prevState => {
+      if (prevState.selectedEmploymentTypeIds.includes(employmentId)) {
+        return {
+          selectedEmploymentTypeIds: prevState.selectedEmploymentTypeIds.filter(
+            id => id !== employmentId,
+          ),
+        }
+      }
+      return {
+        selectedEmploymentTypeIds: [
+          ...prevState.selectedEmploymentTypeIds,
+          employmentId,
+        ],
+      }
+    }, this.fetchJobsListDetails)
+  }
 
   renderTypeOfEmploymentView = () => (
     <div className="employment-container">
@@ -199,13 +238,28 @@ class Jobs extends Component {
           <EmploymentType
             key={eachEmployment.employmentTypeId}
             employmentTypeDetails={eachEmployment}
+            updateEmploymentType={this.updateEmploymentType}
           />
         ))}
       </ul>
     </div>
   )
 
+  onClickSearchIcon = () => {
+    this.fetchJobsListDetails()
+  }
+
+  onChangeSearchInput = event => {
+    this.setState(
+      {
+        searchInputValue: event.target.value,
+      },
+      this.fetchJobsListDetails,
+    )
+  }
+
   render() {
+    const {searchInputValue} = this.state
     return (
       <>
         <Header />
@@ -216,8 +270,14 @@ class Jobs extends Component {
                 type="text"
                 placeholder="Search"
                 className="search-input"
+                onChange={this.onChangeSearchInput}
+                value={searchInputValue}
               />
-              <button type="button" className="search-icon">
+              <button
+                type="button"
+                className="search-icon"
+                onClick={this.onClickSearchIcon}
+              >
                 <BsSearch size={17} />
               </button>
             </div>
@@ -233,8 +293,13 @@ class Jobs extends Component {
                 type="text"
                 placeholder="Search"
                 className="joblist-search-input"
+                onChange={this.onChangeSearchInput}
               />
-              <button type="button" className="joblist-search-icon">
+              <button
+                type="button"
+                className="joblist-search-icon"
+                onClick={this.onClickSearchIcon}
+              >
                 <BsSearch size={17} />
               </button>
             </div>

@@ -1,3 +1,7 @@
+.jobslist-link{
+  text-decoration: none;
+}
+
 .jobs-list-item {
   display: flex;
   flex-direction: column;
