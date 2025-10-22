@@ -26,6 +26,10 @@
   }
 }
 
+.nav-link {
+  text-decoration: none;
+}
+
 .nav-sm-menu-container {
   display: flex;
   align-items: center;
