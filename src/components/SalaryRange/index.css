@@ -1,0 +1,35 @@
+.salary-item {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.salary-radio {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .salary-radio {
+    width: 18px;
+    height: 18px;
+    margin-right: 16px;
+  }
+}
+
+.salary-label {
+  color: #f8fafc;
+  font-size: 12px;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .salary-label {
+    font-size: 16px;
+  }
+}
