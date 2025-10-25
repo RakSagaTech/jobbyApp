@@ -95,7 +95,6 @@ class JobItem extends Component {
 
   renderJobDetailsView = () => {
     const {jobDetails, similarJobs} = this.state
-    console.log(similarJobs)
     const {
       companyLogoUrl,
       companyWebsiteUrl,
@@ -156,7 +155,7 @@ class JobItem extends Component {
           <h1 className="skill-heading">Skills</h1>
           <ul className="skills-list">
             {skills.map(eachSkill => (
-              <Skill key={eachSkill.id} skillDetails={eachSkill} />
+              <Skill key={id} skillDetails={eachSkill} />
             ))}
           </ul>
           <h1 className="life-at-company-heading">Life at Company</h1>
@@ -171,10 +170,10 @@ class JobItem extends Component {
             />
           </div>
         </div>
-        <h1>Similar Jobs</h1>
+        <h1 className="similar-job">Similar Jobs</h1>
         <ul className="similar-job-list">
           {similarJobs.map(eachSimilarJob => (
-            <SimilarJob smiliarJobDetails={eachSimilarJob} />
+            <SimilarJob key={id} smiliarJobDetails={eachSimilarJob} />
           ))}
         </ul>
       </div>

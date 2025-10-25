@@ -1,6 +1,6 @@
 import {FaStar} from 'react-icons/fa'
 import {MdLocationOn} from 'react-icons/md'
-import {BsBriefcaseFill, BsBoxArrowUpRight} from 'react-icons/bs'
+import {BsBriefcaseFill} from 'react-icons/bs'
 
 import './index.css'
 
