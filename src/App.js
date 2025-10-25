@@ -2,6 +2,7 @@ import {Switch, Route} from 'react-router-dom'
 import LoginFrom from './components/LoginForm'
 import Home from './components/Home'
 import Jobs from './components/Jobs'
+import JobItem from './components/JobItem'
 
 import './App.css'
 
@@ -13,6 +14,7 @@ const App = () => (
     <Route exact path="/login" component={LoginFrom} />
     <Route exact path="/" component={Home} />
     <Route exact path="/jobs" component={Jobs} />
+    <Route exact path="/jobs/:id" component={JobItem} />
   </Switch>
 )
 

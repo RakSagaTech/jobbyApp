@@ -15,9 +15,9 @@
 @media screen and (min-width: 768px) {
   .profile-container {
     width: 100%;
-    height: 250px;
+    height: 300px;
     background-size: cover;
-    padding: 30px 20px;
+    padding: 50px 20px;
     margin-bottom: 26px;
   }
 }
@@ -57,7 +57,7 @@
 
 @media screen and (min-width: 768px) {
   .profile-bio {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.6;
   }
 }

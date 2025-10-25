@@ -1,4 +1,4 @@
-.jobslist-link{
+.jobslist-link {
   text-decoration: none;
 }
 
@@ -36,9 +36,9 @@
 
 @media screen and (min-width: 768px) {
   .company-logo {
-    width: 60px;
-    height: 60px;
-    margin-right: 16px;
+    width: 84px;
+    height: 84px;
+    margin-right: 26px;
   }
 }
 
@@ -56,7 +56,7 @@
 
 @media screen and (min-width: 768px) {
   .title {
-    font-size: 20px;
+    font-size: 34px;
   }
 }
 
@@ -81,8 +81,8 @@
 
 @media screen and (min-width: 768px) {
   .star-icon {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -96,7 +96,7 @@
 
 @media screen and (min-width: 768px) {
   .rating {
-    font-size: 20px;
+    font-size: 32px;
   }
 }
 
@@ -141,9 +141,9 @@
 
 @media screen and (min-width: 768px) {
   .location-icon {
-    height: 22px;
-    width: 22px;
-    margin-right: 5px;
+    height: 28px;
+    width: 28px;
+    margin-right: 8px;
   }
 }
 
@@ -156,7 +156,7 @@
 
 @media screen and (min-width: 768px) {
   .location {
-    font-size: 16px;
+    font-size: 28px;
   }
 }
 
@@ -174,8 +174,8 @@
 
 @media screen and (min-width: 768px) {
   .briefcasefill-icon {
-    height: 22px;
-    width: 22px;
+    height: 32px;
+    width: 32px;
     margin-right: 10px;
   }
 }
@@ -189,20 +189,20 @@
 
 @media screen and (min-width: 768px) {
   .employment-type {
-    font-size: 16px;
+    font-size: 28px;
   }
 }
 
 .package {
   color: #ffffff;
   font-family: 'Roboto';
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
   .package {
-    font-size: 18px;
+    font-size: 30px;
   }
 }
 
@@ -222,7 +222,7 @@
 
 @media screen and (min-width: 768px) {
   .description-heading {
-    font-size: 24px;
+    font-size: 34px;
     margin-top: 20px;
   }
 }
@@ -230,7 +230,7 @@
 .job-description {
   color: #ffffff;
   font-family: 'Roboto';
-  font-size: 11px;
+  font-size: 12px;
   font-weight: normal;
   margin-top: 0px;
   line-height: 1.8;
@@ -238,6 +238,6 @@
 
 @media screen and (min-width: 768px) {
   .job-description {
-    font-size: 22.8px;
+    font-size: 30.2px;
   }
 }
