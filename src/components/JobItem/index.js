@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import {FaStar} from 'react-icons/fa'
@@ -91,7 +92,31 @@ class JobItem extends Component {
     }
   }
 
-  renderFailureView = () => <p>Failure View</p>
+  onClickRetryBtn = () => {
+    this.fetchJobContentDetails()
+  }
+
+  renderFailureView = () => (
+    <div className="similarjob-failure-container">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+        alt="failure view"
+        className="similarjob-failure-img"
+      />
+      <h1 className="similarjob-failure-heading">Oops! Something Went Wrong</h1>
+      <p className="similarjob-failure-description">
+        We cannot seem to find the page you are looking for.
+      </p>
+      <button
+        type="button"
+        className="similarjob-retry-btn"
+        onClick={this.onClickRetryBtn}
+      >
+        {' '}
+        Retry{' '}
+      </button>
+    </div>
+  )
 
   renderJobDetailsView = () => {
     const {jobDetails, similarJobs} = this.state
@@ -170,7 +195,7 @@ class JobItem extends Component {
             />
           </div>
         </div>
-        <h1 className="similar-job">Similar Jobs</h1>
+        <h1 className="similar-job-heading">Similar Jobs</h1>
         <ul className="similar-job-list">
           {similarJobs.map(eachSimilarJob => (
             <SimilarJob key={id} smiliarJobDetails={eachSimilarJob} />
@@ -182,7 +207,7 @@ class JobItem extends Component {
 
   renderLoadingView = () => (
     <>
-      <div className="jobitem-loader-container" data-testid="loader">
+      <div className="similarjob-loader-container" data-testid="loader">
         <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
       </div>
     </>
@@ -203,6 +228,10 @@ class JobItem extends Component {
   }
 
   render() {
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken === undefined) {
+      return <Redirect to="/login" />
+    }
     return (
       <>
         <Header />

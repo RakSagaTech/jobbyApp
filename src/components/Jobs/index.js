@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Redirect} from 'react-router-dom'
 import {BsSearch} from 'react-icons/bs'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
@@ -116,6 +117,10 @@ class Jobs extends Component {
     }
   }
 
+  onClickRetryBtn = () => {
+    this.fetchJobsListDetails()
+  }
+
   renderFailureView = () => (
     <div className="jobslist-failure-container">
       <img
@@ -127,7 +132,11 @@ class Jobs extends Component {
       <p className="jobslist-failure-description">
         We cannot seem to find the page you are looking for.
       </p>
-      <button type="button" className="jobslist-retry-btn">
+      <button
+        type="button"
+        className="jobslist-retry-btn"
+        onClick={this.onClickRetryBtn}
+      >
         {' '}
         Retry{' '}
       </button>
@@ -260,6 +269,11 @@ class Jobs extends Component {
 
   render() {
     const {searchInputValue} = this.state
+
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken === undefined) {
+      return <Redirect to="/login" />
+    }
     return (
       <>
         <Header />

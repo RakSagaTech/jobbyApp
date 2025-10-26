@@ -20,7 +20,7 @@
 
 @media screen and (min-width: 768px) {
   .profile-options-container {
-    width: 380px;
+    width: 340px;
     flex-shrink: 0;
   }
 }
@@ -83,14 +83,16 @@
 .employment-heading {
   color: #f1f5f9;
   font-family: 'Roboto';
-  font-size: 14px;
+  font-size: 11px;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 4px;
 }
 @media screen and (min-width: 768px) {
   .employment-heading {
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -111,14 +113,16 @@
 .salary-heading {
   color: #f1f5f9;
   font-family: 'Roboto';
-  font-size: 14px;
+  font-size: 11px;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 4px;
 }
 @media screen and (min-width: 768px) {
   .salary-heading {
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -221,7 +225,7 @@
 }
 
 .jobslist-failure-img {
-  width: 100%;
+  width: 70%;
   margin-top: 20px;
 }
 
@@ -236,7 +240,7 @@
   color: #ffffff;
   font-family: 'Roboto';
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   margin-top: 20px;
   width: 100%;
   text-align: center;
@@ -253,10 +257,10 @@
 .jobslist-failure-description {
   color: #ffffff;
   font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: normal;
+  font-size: 13px;
   margin-top: 0px;
-  width: 80%;
+  width: 60%;
   text-align: center;
   line-height: 1.8;
 }
@@ -296,7 +300,7 @@
 }
 
 .nojobs-img {
-  width: 100%;
+  width: 80%;
   margin-top: 20px;
 }
 
@@ -328,10 +332,10 @@
 .nojobs-description {
   color: #ffffff;
   font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: normal;
+  font-size: 15px;
   margin-top: 0px;
-  width: 60%;
+  width: 67%;
   text-align: center;
   line-height: 1.8;
 }

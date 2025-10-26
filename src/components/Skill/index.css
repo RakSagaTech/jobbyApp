@@ -1,7 +1,7 @@
 .skill-item {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 44%;
   margin-bottom: 40px;
 }
 
@@ -9,32 +9,33 @@
   .skill-item {
     width: 30%;
     margin-bottom: 80px;
+    margin-right: 40px;
   }
 }
 
 .skill-img {
-  width: 26px;
-  height: 26px;
-  margin-right: 10px;
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
 }
 
 @media screen and (min-width: 768px) {
   .skill-img {
-    width: 54px;
-    height: 54px;
-    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+    margin-right: 22px;
   }
 }
 
 .skill-name {
   color: #ffffff;
   font-family: 'Roboto';
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
   .skill-name {
-    font-size: 20px;
+    font-size: 26px;
   }
 }

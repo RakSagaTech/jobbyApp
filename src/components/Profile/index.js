@@ -57,10 +57,18 @@ class Profile extends Component {
     }
   }
 
+  onClickRetryBtn = () => {
+    this.fetchProfileDetails()
+  }
+
   renderFailureView = () => (
     <>
       <div className="failure-container">
-        <button type="button" className="profile-retry-btn">
+        <button
+          type="button"
+          className="profile-retry-btn"
+          onClick={this.onClickRetryBtn}
+        >
           {' '}
           Retry{' '}
         </button>
